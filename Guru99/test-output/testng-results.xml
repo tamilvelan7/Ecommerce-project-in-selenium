@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-06T13:20:36 IST" name="Default suite" finished-at="2023-02-06T13:22:02 IST" duration-ms="86457">
+    <groups>
+    </groups>
+    <test started-at="2023-02-06T13:20:36 IST" name="Default test" finished-at="2023-02-06T13:22:02 IST" duration-ms="86457">
+      <class name="com.Ecommerce.guru99.Compare_Product">
+        <test-method signature="verify()[pri:0, instance:com.Ecommerce.guru99.Compare_Product@31fa1761]" started-at="2023-02-06T13:20:36 IST" name="verify" finished-at="2023-02-06T13:21:57 IST" duration-ms="81183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify -->
+        <test-method signature="verify1()[pri:0, instance:com.Ecommerce.guru99.Compare_Product@31fa1761]" started-at="2023-02-06T13:21:57 IST" name="verify1" finished-at="2023-02-06T13:22:02 IST" depends-on-methods="com.Ecommerce.guru99.Compare_Product.verify" duration-ms="4974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify1 -->
+      </class> <!-- com.Ecommerce.guru99.Compare_Product -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
