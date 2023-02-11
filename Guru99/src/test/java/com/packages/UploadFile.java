@@ -17,7 +17,6 @@ public class UploadFile extends Utils {
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.manage().window().maximize();
 	driver.findElement(By.xpath("//span[text()='Add Files']")).sendKeys("C:\\Users\\tamil\\eclipse-workspace\\eclipse-workspace\\com.Macys\\Test datas\\Tamil test data.xlsx");
-	
 		
 	}
 }

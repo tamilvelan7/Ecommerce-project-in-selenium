@@ -1,11 +1,15 @@
 package com.Ecommerce.guru99;
 
+import java.util.Set;
+
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
 import com.Macys.base.BaseClass;
 import com.Macys.base.Utils;
-import com.POM.clas.VerifyPage;
+import com.POM.clas.Mobile_Page;
 
 public class Compare_Product extends BaseClass{
 	
@@ -17,8 +21,25 @@ public class Compare_Product extends BaseClass{
 
 	@Test(dependsOnMethods = {"verify"})
 	public static void verify1(){
-		PageFactory.initElements(driver, VerifyPage.class);
-		VerifyPage.mobile.click();
-		////a[text()='Sony Xperia']//following::a[text()='Add to Compare']
+		PageFactory.initElements(driver, Mobile_Page.class);
+		Mobile_Page.mobile.click();
+		Mobile_Page.sony_compare.click();
+		Mobile_Page.iphone_compare.click();
+		Mobile_Page.compare_button.click();
+		
 	}
+	
+	@Test(dependsOnMethods = {"verify1"})
+	public static void handleWindow() {
+		Set<String> windowHandles = driver.getWindowHandles();
+		for (String string : windowHandles) {
+			if(driver.switchTo().window(string).getTitle().contains("Products Comparison List - Magento Commerce")) {
+				print(getTitle());
+			}
+		}
+	}
+//	@AfterSuite
+//	public static void close() {
+//		driver.quit();
+//	}
 }

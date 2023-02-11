@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.Macys.base.BaseClass;
 import com.Macys.base.Utils;
 import com.POM.clas.Add_To_Card;
-import com.POM.clas.VerifyPage;
+import com.POM.clas.Mobile_Page;
 
 public class VerifyApp extends BaseClass {
 	static WebDriver driver;
@@ -25,10 +25,10 @@ public class VerifyApp extends BaseClass {
 
 	@Test(priority = 1)
 	public static void verify1() {
-		PageFactory.initElements(driver, VerifyPage.class);
+		PageFactory.initElements(driver, Mobile_Page.class);
 		if (getTitle().equals("Home page"))
 			print("first test case Passed");
-		VerifyPage.mobile.click();
+		Mobile_Page.mobile.click();
 	}
 
 	@Test(priority = 2)
@@ -39,16 +39,16 @@ public class VerifyApp extends BaseClass {
 
 	@Test(priority = 3)
 	public static void verify4() throws IOException {
-		drop = new Select(VerifyPage.sort);
+		drop = new Select(Mobile_Page.sort);
 		drop.selectByVisibleText("Name");
 		screenshot("C:\\Users\\tamil\\git\\Ecommerce-project-in-selenium\\Guru99\\Test datas\\data.png1");
 	}
 
 	@Test(enabled = false, dependsOnMethods = { "verify4" })
 	public static void verify5() {
-		String text =VerifyPage.phone_name.getText();
-		VerifyPage.phone.click();
-		String text1 =VerifyPage.price.getText();
+		String text =Mobile_Page.phone_name.getText();
+		Mobile_Page.phone.click();
+		String text1 =Mobile_Page.price.getText();
 		if (text.equals(text1))
 			System.out.println("Amount verified successfully");
 		else

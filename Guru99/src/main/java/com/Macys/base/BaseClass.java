@@ -62,6 +62,11 @@ public class BaseClass {
 	public static void print(String out) {
 		System.out.println(out);
 	}
+	
+//	switch to windows
+	public static void windowsHandle(String win_Name) {
+		driver.switchTo().window(win_Name);
+	}
 
 	
 //	Close the browser

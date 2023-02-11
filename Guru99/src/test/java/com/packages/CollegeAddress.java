@@ -33,7 +33,7 @@ public class CollegeAddress extends Utils{
 	LinkedList<String> name=new LinkedList();
 	
 	//read the data in excel file
-	File newPath=new File(path1);
+	File newPath=new File("path1");
 	FileInputStream file=new FileInputStream(newPath);
 	Workbook wk=new XSSFWorkbook(file);
 	Sheet sheet = wk.getSheet("Colleges list");
