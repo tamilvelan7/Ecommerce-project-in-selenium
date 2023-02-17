@@ -21,4 +21,6 @@ public class Utils {
 	public static final String title = "Guru99 Bank Manager HomePage";
 
 	public static String testfn = "C:\\Users\\tamil\\eclipse-workspace\\eclipse-workspace\\com.Macys\\Test datas\\Tamil test data.xlsx";
+
+	public static final String filpkart="https://www.flipkart.com/";
 }

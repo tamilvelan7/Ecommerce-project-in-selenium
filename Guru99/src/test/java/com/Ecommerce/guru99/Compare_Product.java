@@ -33,13 +33,15 @@ public class Compare_Product extends BaseClass{
 	public static void handleWindow() {
 		Set<String> windowHandles = driver.getWindowHandles();
 		for (String string : windowHandles) {
-			if(driver.switchTo().window(string).getTitle().contains("Products Comparison List - Magento Commerce")) {
+			if(driver.switchTo().window(string).getTitle().contains("Products Comparison List")) {
 				print(getTitle());
+				break;
 			}
+		Mobile_Page.closeWindow.click();	
 		}
 	}
 //	@AfterSuite
 //	public static void close() {
-//		driver.quit();
-//	}
-}
+//		driver.close();
+//		}
+	}

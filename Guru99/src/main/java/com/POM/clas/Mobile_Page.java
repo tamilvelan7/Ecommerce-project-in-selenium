@@ -34,4 +34,7 @@ public class Mobile_Page {
 	
 	@FindBy(xpath="//span[text()='Description']//following::td[2]")
 	public static WebElement descri_iphone;
+
+	@FindBy(xpath="//span[contains(text(),'Close Window')]")
+	public static WebElement closeWindow;
 }

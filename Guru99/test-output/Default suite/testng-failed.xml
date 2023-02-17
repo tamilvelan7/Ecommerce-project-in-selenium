@@ -5,7 +5,6 @@
     <classes>
       <class name="com.Ecommerce.guru99.Compare_Product">
         <methods>
-          <include name="close"/>
           <include name="verify1"/>
           <include name="handleWindow"/>
           <include name="verify"/>
