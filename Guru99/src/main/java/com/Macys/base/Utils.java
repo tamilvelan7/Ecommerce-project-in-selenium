@@ -23,4 +23,6 @@ public class Utils {
 	public static String testfn = "C:\\Users\\tamil\\eclipse-workspace\\eclipse-workspace\\com.Macys\\Test datas\\Tamil test data.xlsx";
 
 	public static final String filpkart="https://www.flipkart.com/";
+	
+	public static final String path_property="C:\\\\Users\\\\tamil\\\\git\\\\Ecommerce-project-in-selenium\\\\Guru99\\\\Credential.properties";
 }

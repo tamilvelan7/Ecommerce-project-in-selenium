@@ -1,12 +1,10 @@
 package com.Ecommerce.guru99;
 
+import java.io.IOException;
 import java.util.Set;
-
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
-
 import com.Macys.base.BaseClass;
 import com.Macys.base.Utils;
 import com.POM.clas.Mobile_Page;
@@ -15,7 +13,7 @@ public class Compare_Product extends BaseClass{
 	
 	@Test
 	public static void verify() {
-		launchFirefox();
+		launchChrome();
 		getUrl(Utils.url1);
 	}
 
@@ -30,18 +28,15 @@ public class Compare_Product extends BaseClass{
 	}
 	
 	@Test(dependsOnMethods = {"verify1"})
-	public static void handleWindow() {
+	public static void handleWindow() throws IOException {
 		Set<String> windowHandles = driver.getWindowHandles();
 		for (String string : windowHandles) {
-			if(driver.switchTo().window(string).getTitle().contains("Products Comparison List")) {
-				print(getTitle());
-				break;
-			}
-		Mobile_Page.closeWindow.click();	
+			driver.switchTo().window(string);
+			screenshot("C:\\Users\\tamil\\git\\Ecommerce-project-in-selenium\\Guru99\\ScreenShot\\ss.png");
 		}
 	}
-//	@AfterSuite
-//	public static void close() {
-//		driver.close();
-//		}
+	@AfterSuite
+	public static void close() {
+		driver.quit();
+		}
 	}

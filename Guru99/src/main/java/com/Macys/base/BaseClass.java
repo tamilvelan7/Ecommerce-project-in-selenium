@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -13,10 +12,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseClass {
 	public static WebDriver driver;
 	public static Select dropdown;
+	public static WebDriverWait wait;
 //	Launching Firefox driver
 	public static void launchFirefox() {
 		System.setProperty(Utils.firefor_Browser, Utils.path);
@@ -29,8 +30,9 @@ public class BaseClass {
 //	Launching Chrome Driver
 	public static void launchChrome() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\tamil\\eclipse-workspace\\Projectname\\Chrome\\chromedriver.exe");
+				"C:\\Users\\tamil\\git\\Ecommerce-project-in-selenium\\Guru99\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 
@@ -79,6 +81,11 @@ public class BaseClass {
 //	Quit the browser
 	public static void quit() {
 		driver.quit();
+	}
+	
+	public static WebDriverWait explicitlyWait(int sec) {
+		wait=new WebDriverWait(driver,sec);
+		return wait;
 	}
 }
 

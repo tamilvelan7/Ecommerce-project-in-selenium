@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Ecommerce.guru99.Compare_Product">
+      <class name="com.Ecommerce.guru99.RegisterAcc">
         <methods>
           <include name="verify1"/>
-          <include name="handleWindow"/>
-          <include name="verify"/>
         </methods>
-      </class> <!-- com.Ecommerce.guru99.Compare_Product -->
+      </class> <!-- com.Ecommerce.guru99.RegisterAcc -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
